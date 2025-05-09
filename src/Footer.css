@@ -1,0 +1,43 @@
+.footer {
+  padding-top: 100px;
+  color: white;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Asegura que el contenido ocupe el 100% */
+  padding: 0 20px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.footerIcons {
+  display: flex;
+  gap: 16px;
+}
+
+.footerIcons a {
+  display: inline-block;
+}
+
+.footerIcons img {
+  width: 30px;
+  height: 30px;
+  color: white;
+  transition: transform 0.3s ease;
+  filter: invert(1); /* Hace que el icono sea blanco */
+}
+
+.footerIcons a:hover img {
+  transform: scale(1.1);
+}

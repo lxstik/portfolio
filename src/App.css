@@ -1,41 +1,324 @@
+/* Ajustes globales */
 body {
-    background-color: #10041c; /* Fondo oscuro */
-    color: white; /* Texto en blanco */
-    font-family: Arial, sans-serif; /* Fuente general */
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar {
-    background-color: transparent; /* Fondo transparente para la barra de navegación */
-  }
-  
-  .navbar-brand, .nav-link {
-    color: white !important; /* Texto blanco para los enlaces */
-  }
-  
-  .nav-link:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
-  }
-  
-  .container-fluid {
-    padding: 0 15px;
+  background-color: #10041c;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding-top: 150px; /* Compensa la altura del navbar fijo */
+}
+
+.contentContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.contentSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 120px; /* Incrementamos aún más la separación entre secciones */
+  flex-wrap: wrap;
+}
+
+.sectionLeft,
+.sectionRight {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.innerLaptopH1 {
+  font-size: 100px;
+  font-family: "Varela Round", sans-serif;
+  margin-bottom: 15px;
+}
+
+.innerExpH1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.responsiveImage {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+/* Ajuste del navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.bg-custom {
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #333;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff !important;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+.nav-link {
+  color: #b0b0b0 !important;
+  font-weight: 400;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  position: relative;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+               0 0 20px rgba(255, 255, 255, 0.6),
+               0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20px;
+}
+
+/* Estilo para el enlace activo */
+.nav-link.active {
+  color: #fff !important;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+               0 0 25px rgba(255, 255, 255, 0.7),
+               0 0 35px rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
   }
 
-
-  /*Home*/
-
-
-  .centerLaptopText{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .nav-link {
+    font-size: 1rem;
   }
-  
-  .innerLaptop{
-    margin: 150px;
-  }
+}
 
-  .innerLaptopH1{
-    font-size: 120px;
+.featuredProjects {
+  margin-top: 120px; /* Mayor separación entre "Experience" y "Featured Projects" */
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 48px;
+  margin-bottom: 40px;
+  font-family: "Varela Round", sans-serif;
+  color: #fff;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 10px;
+}
+
+@media (max-width: 992px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 600px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projectCard {
+  background: #1e1e2f;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  text-align: left;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+}
+
+.projectImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.projectCard h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.projectCard p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Nuevos estilos para la sección de Tecnologías */
+/* Ajustes para la sección de Tecnologías */
+.techSection {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.techTitle {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 60px;
+  font-family: "Varela Round", sans-serif;
+}
+
+.technologiesGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+@media (max-width: 1200px) {
+  .technologiesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .technologiesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .technologiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .technologiesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.techCard {
+  background: #1e1e2f;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  color: white;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin: 0 auto;
+}
+
+.techCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+  background-color: #333;
+}
+
+.techCard img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.techCard p {
+  font-size: 12px;
+  color: #ccc;
+  margin: 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Animación de entrada para las tarjetas */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.techCard {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.techCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.techCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.techCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.techCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.techCard:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.techCard:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.techCard:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.techCard:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.techCard:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+/* Solución para que las imágenes carguen correctamente */
+.techCard img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
