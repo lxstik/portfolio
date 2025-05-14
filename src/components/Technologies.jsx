@@ -10,7 +10,6 @@ const techData = [
   { title: 'Extras', items: ['Node.js', 'Apache', 'SQLite', 'npm'] },
 ];
 
-// Convierte nombres a formatos compatibles con Simple Icons CDN
 const getIconSrc = (name) => {
   const formatted = name
     .toLowerCase()
@@ -23,7 +22,7 @@ const getIconSrc = (name) => {
 
 const Technologies = () => {
   return (
-    <section className="techMini">
+    <section className="techMini" style={{ marginTop: "150px", marginBottom: "150px" }}>
       <h2 className="techMiniTitle">Tech Stack</h2>
       <div className="techMiniGrid">
         {techData.map((category, idx) => (

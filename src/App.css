@@ -13,13 +13,22 @@ body {
   padding: 40px 20px;
 }
 
+/* Incrementar la separación entre las secciones */
 .contentSection {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  margin-bottom: 120px; /* Incrementamos aún más la separación entre secciones */
+  margin-bottom: 460px; /* Incrementamos aún más la separación entre secciones */
   flex-wrap: wrap;
+}
+
+.featuredProjects {
+  margin-top: 260px; /* Mayor separación entre "Experience" y "Featured Projects" */
+}
+
+.techSection {
+  margin-top: 660px; /* Mayor separación entre "Featured Projects" y "Technologies" */
 }
 
 .sectionLeft,
@@ -321,4 +330,122 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.aboutSection {
+  padding-top: 0 !important; /* Elimina el padding-top solo para esta sección */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+.sectionLeft {
+  flex: 1;
+  max-width: 500px; /* Limita el ancho del texto */
+}
+
+.sectionRight {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Centra la imagen dentro de su contenedor */
+}
+
+.roundedImage {
+  border-radius: 50%; /* Hace que la imagen sea completamente circular */
+  width: 300px; /* Ancho fijo para que sea cuadrada */
+  height: 300px; /* Altura fija para que sea cuadrada */
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contentContainer2{
+  height: 600px !important;
+  padding: 0px;
+}
+
+
+
+.allProjects {
+  padding: 0px;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.projectCard {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+}
+
+.projectImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.contactSection {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 60px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.formGroup label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.submitButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
 }

@@ -31,7 +31,7 @@ export default function Home() {
       <section className="featuredProjects">
         <h2 className="sectionTitle">Featured Projects</h2>
         <div className="projectsGrid">
-          {[...Array(6)].map((_, i) => (
+          {[...Array(8)].map((_, i) => (
             <div className="projectCard" key={i}>
               <img src={`../../public/tetris.webp`} alt={`Project ${i + 1}`} className="projectImage" />
               <h3>Project Title {i + 1}</h3>
