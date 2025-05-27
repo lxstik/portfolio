@@ -1,19 +1,16 @@
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import './App.css';
-
 import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
 
 function App() {
   return (
     <Router>
       <nav className="navbar navbar-expand-lg navbar-light bg-custom">
         <div className="container-fluid">
-          <NavLink className="navbar-brand nav-link" to="/" end>
-            Home
-          </NavLink>
+          <HashLink className="navbar-brand nav-link" smooth to="/#">
+            Yehor Fal
+          </HashLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -28,30 +25,30 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
-                  About
-                </NavLink>
+                <HashLink className="nav-link" smooth to="/#about">
+                  Sobre mí
+                </HashLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/projects">
-                  Projects
-                </NavLink>
+                <HashLink className="nav-link" smooth to="/#projects">
+                  Proyectos
+                </HashLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
-                  Contact
-                </NavLink>
+                <HashLink className="nav-link" smooth to="/#technologies">
+                  Tecnologías
+                </HashLink>
+              </li>
+              <li className="nav-item">
+                <HashLink className="nav-link" smooth to="/#contact">
+                  Contacto
+                </HashLink>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Home />
     </Router>
   );
 }
