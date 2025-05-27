@@ -15,7 +15,7 @@ export default function Home() {
       {/* Sección About Me */}
       <section id="about" className="contentSection aboutSection" style={{ minHeight: '50vh', marginTop: 400 }}>
         <div className="sectionLeft">
-          <h1 className="innerExpH1" style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 700 }}>About Me</h1>
+          <h1 className="innerExpH1" style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 700 }}>Sobre mi</h1>
           <p style={{ fontSize: '1.1rem', color: '#d0d0d0', maxWidth: 500, margin: '0 auto' }}>
             ¡Hola! Soy Yehor Fal, tengo 21 años y soy desarrollador web full stack. Me apasiona aprender, crear y enfrentar nuevos retos.<br /><br />
             En mis prácticas mejoré mis habilidades con Bootstrap y resolvía problemas técnicos en la web de la empresa.<br /><br />
@@ -45,7 +45,7 @@ export default function Home() {
             textAlign: 'center'
           }}
         >
-          Featured Projects
+          Proyectos Destacados
         </h2>
         <div className="projectsGrid"
           style={{

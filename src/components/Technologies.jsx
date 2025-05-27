@@ -23,7 +23,7 @@ const getIconSrc = (name) => {
 const Technologies = () => {
   return (
     <section className="techMini" style={{ marginTop: "150px", marginBottom: "150px" }}>
-      <h2 className="techMiniTitle">Tech Stack</h2>
+      <h2 className="techMiniTitle">Tecnologias</h2>
       <div className="techMiniGrid">
         {techData.map((category, idx) => (
           <div key={idx} className="techMiniGroup">
